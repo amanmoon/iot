@@ -137,5 +137,63 @@ mat-card-actions {
     }
 }
   
+
+.wrap-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   
+  .container {
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+  }
   
+  .login-box {
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+
+  /* Optional: Add media query for larger screens */
+  @media only screen and (min-width: 600px) {
+    .wrap-login {
+      justify-content: flex-start;
+    }
+  }
+
+
+
+
+  .wrap-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(45deg, #F3E5F5, #E1BEE7, #CE93D8, #BA68C8, #AB47BC, #9C27B0, #8E24AA, #7B1FA2, #6A1B9A, #4A148C); */
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+  }
+  
+  .login-box {
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  /* Optional: Add media query for larger screens */
+  @media only screen and (min-width: 600px) {
+    .wrap-login {
+      justify-content: flex-start;
+    }
+  }

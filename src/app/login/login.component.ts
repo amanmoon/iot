@@ -1,7 +1,7 @@
 import { Component , OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ImageLoaderService } from '../image-loader.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   logoUrl: string = '';
 
-  constructor(private formBuilder: FormBuilder,private imageLoader: ImageLoaderService) {
+  constructor(private formBuilder: FormBuilder,private imageLoader: ImageLoaderService, private router:Router) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -30,10 +30,14 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     if (this.loginForm.valid) {
       console.log('Login form submitted');
+      
     } else {
       return;
     }
+    console.log("dfdfasfasf")
+    this.router.navigate(['/main']); 
   }
+  
 }
 
 

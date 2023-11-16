@@ -1,0 +1,19 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400&family=Lobster+Two:ital@1&family=Pacifico&display=swap" rel="stylesheet">
+
+<div class="top-bar">
+    <span class="page-title">ROOMS</span>
+  </div>
+  
+  <div class="room-list">
+    <div class="room-card" *ngFor="let room of rooms" (click)="navigateToRoomPage(room.id)">
+      <div class="img_name">
+      <img src="{{ room.imageUrl }}" alt="{{ room.name }}">
+      <h3>{{ room.name }}</h3></div>
+      <div class="temp_light_time">
+        <p class="temp"><img src="temp" alt="temp">{{room.temp}}</p>
+        <p class="light_time"><img src="light" alt="light">{{room.light_time}}</p>
+      </div>
+    </div>
+  </div>
